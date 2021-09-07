@@ -1,16 +1,7 @@
 import React from 'react'
-import propTypes from 'prop-types'
 
 export const LanguageTable = ({countries}) => {
-  var totalCountries = countries.reduce((sum, obj) => {
-    if(Array.isArray(obj)){
-      return sum += obj.length
-    } else if (typeof obj === 'object' ) {
-      return sum += 1
-    } else {
-      return sum
-    }
-  },0)
+ 
 
   return (
     <>
@@ -49,8 +40,4 @@ export const LanguageTable = ({countries}) => {
       </>)}
     </>
   )
-}
-
-LanguageTable.propTypes = {
-  countries: propTypes.array.isRequired, // eslint-disable-line
 }
